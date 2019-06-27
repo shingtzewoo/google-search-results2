@@ -5,54 +5,50 @@
 html, body {
     width: 100%;
     height: 100%;
-}
-
-.top, .right {
-    position: fixed;
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    left: 0;
+    overflow-x: hidden;
 }
 
 .top {
-    justify-content: flex-start;
+    position: fixed;
+    height: auto;
+    width: 100%;
+    display: flex;
     z-index: 9999;
+    flex-direction: row;
+    background-color: white;
+    justify-content: flex-start;
+    align-items: center;
     top: 0;
     right: 0;
 }
 
 .right {
-    justify-content: flex-end;
-    z-index: 9998;
+    position: relative;
     align-items: center;
-    top: 15px;
-    right: 10px;
+    display: inline-flex;
+    flex-direction: row;
+    left: 500px;
 }
+
+.right > figure {
+    margin: 0 5px;
+}
+
 
 .top > figure {
     width: auto;
+    position: relative;
     height: auto;
 }
 
 .top > figure > img {
     width: 100px;
     height: 40px;
-    position: relative;
-    left: -10px;
-    display: inline-block;
 }
 
 .search {
-    position: relative;
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: flex-start;
     width: auto;
     height: auto;
-    right: 25px;
-    top: 10px;
 }
 
 .search > img {
@@ -60,12 +56,11 @@ html, body {
     width: 24px;
     height: 24px;
     z-index: 2;
-    top: 11px;
-    right: 35px;
+    top: 8px;
+    right: 50px;
 }
 
 .search > input[type=text] {
-    position: relative;
     width: 600px;
     height: 50px;
     border-radius: 50px;
@@ -86,11 +81,6 @@ html, body {
     box-shadow: grey 2px 2px 5px 2px;
     outline: none;
 }
-
-.right > figure {
-    margin: 0 5px;
-}
-
 
 .resultspage {
     min-height: 100%;
@@ -131,22 +121,42 @@ li {
 }
 
 main {
+    display: grid;
+    grid-template-rows: 50px repeat(6, 150px);
+    grid-template-columns: 100%;
     position: relative;
     background: whitesmoke;
     color: #444;
-    padding: 1rem;
+    padding: 0;
+    margin: 0;
 }
 
 main > p {
    position: relative;
    color: #5F6368;
    font-size: 14px;
-   left: 162px;
-   bottom: 18px;
+   left: 170px;
+   grid-column: 1 / span 1;
+}
+
+.speed, .featured, .results {
+    position: relative;
+    left: 180px;
+    max-width: 100%;
+}
+.featured {
+    position: relative;
+    grid-column: 2 / span 1;
+    font-size: 14px;
 }
 
 footer {
+    display: grid;
+    grid-template-rows: 40px 40px;
+    grid-template-columns: 100%;
+    grid-template-areas: "location"
+                         "bottombar";
     position: relative;
-    background-color: blue;
-    padding: 1rem;
+    background-color: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
 }
