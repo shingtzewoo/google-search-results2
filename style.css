@@ -122,7 +122,7 @@ li {
 
 main {
     display: grid;
-    grid-template-rows: 50px repeat(6, 150px);
+    grid-template-rows: 50px repeat(6, 130px);
     grid-template-columns: 100%;
     position: relative;
     background: whitesmoke;
@@ -131,24 +131,93 @@ main {
     margin: 0;
 }
 
-main > p {
-   position: relative;
-   color: #5F6368;
-   font-size: 14px;
-   left: 170px;
-   grid-column: 1 / span 1;
+.speed {
+    position: relative;
+    left: 175px;
 }
 
-.speed, .featured, .results {
+.results, .featured {
     position: relative;
-    left: 180px;
-    max-width: 100%;
+    left: 160px;
 }
+
+.speed {
+   color: #5F6368;
+   font-size: 14px;
+   grid-row: 1 / span 1;
+}
+
 .featured {
-    position: relative;
-    grid-column: 2 / span 1;
-    font-size: 14px;
+    grid-row: 2 / span 1;
+    font-size: 16px;
+    width: 638px;
+    height: 130px;
+    align-self: center;
+    border: solid 1px lightgrey;
+    border-radius: 5px;
 }
+
+.featured > p, .featured > a, .results > span > p, .featured > span > p, .results > p, .results > a {
+    margin-left: 10px;
+}
+
+.results {
+    width: 638px;
+    align-self: end;
+}
+
+.results > p {
+    position: relative;
+    bottom: 10px;
+    margin-bottom: 0px;
+}
+
+
+.featured > a {
+    position: relative;
+    bottom: 5px;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
+.featured > a:hover {
+    text-decoration: underline;
+}
+
+.results > span > p, .featured > span > p {
+    font-size: 14px;
+    color: #006621;
+}
+
+.featured > span > p {
+    margin-top: 0;
+    bottom: 5px;
+}
+
+.results > span > p {
+    margin-top: 5px;
+}
+
+.results .one {
+    grid-row: 3 / span 1
+}
+
+.results .two {
+    grid-row: 4 / span 1
+}
+
+.results .three {
+    grid-row: 5 / span 1
+}
+
+.results .four {
+    grid-row: 6 / span 1
+}
+
+.results .five {
+    grid-row: 7 / span 1
+}
+
 
 footer {
     display: grid;
