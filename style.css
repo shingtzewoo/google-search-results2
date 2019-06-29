@@ -125,7 +125,6 @@ main {
     grid-template-rows: 50px repeat(6, 130px);
     grid-template-columns: 100%;
     position: relative;
-    background: whitesmoke;
     color: #444;
     padding: 0;
     margin: 0;
@@ -228,4 +227,27 @@ footer {
     position: relative;
     background-color: #f2f2f2;
     border-top: 1px solid #e4e4e4;
+}
+
+.location {
+    display: inline-flex;
+    position: relative;
+    font-size: 15px;
+    color: #5F6368;
+    left: 175px;
+    grid-row-start: 1 / span 1;
+}
+
+.left {
+    grid-row-start: 2 / span 1;
+    font-size: 13px;
+    color: #5F6368;
+    left: 175px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.left > a {
+    margin-right: 15px;
 }
